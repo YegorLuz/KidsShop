@@ -1,15 +1,9 @@
-.body {
-  display: flex;
-  flex-direction: column;
-  width: 960px;
-  align-self: center;
+.body-layout {
+  max-width: 1520px;
+  padding: 0 55px
 }
 
-#menu {
-  display: flex;
-  flex-direction: row;
-
-  > .nav-link {
-    display: flex;
-  }
+section {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
 }

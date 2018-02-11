@@ -3,21 +3,301 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="css/index.css" />
 </head>
 <body>
-    <header id="header">header</header>
-    <div class="body">
-        <nav id="menu">
-            <a href="/" class="nav-link">Link 1</a>
-            <a href="/" class="nav-link">Link 2</a>
-            <a href="/" class="nav-link">Link 3</a>
-            <a href="/" class="nav-link">Link 4</a>
-            <a href="/" class="nav-link">Link 5</a>
-        </nav>
-        <section id="body">
-            <div>Some body text</div>
-        </section>
+    <div class="promo-top-banner">
+        <div class="container-fluid body-layout">
+            <div class="row">
+                <div class="col">
+                    <p class="h5 text-center text-white">BANNER</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <footer id="footer">footer</footer>
+    <header id="header">
+        <div class="container-fluid body-layout">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/logo-example.png" style="width: 100%; padding: 5px 0;" />
+                    <div class="phone"><span class="oi oi-phone" title="icon phone" aria-hidden="true"></span>(063) 94-58-256</div>
+                </div>
+                <div class="col-8">
+                    <div class="row">
+                        <div class="col">
+                            <nav class="nav nav-justified">
+                                <a class="nav-item nav-link" href="#">Доставка и оплата</a>
+                                <a class="nav-item nav-link" href="#">Галерея</a>
+                                <a class="nav-item nav-link" href="#">Обзоры</a>
+                                <a class="nav-item nav-link" href="#">Контакты</a>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button">Button</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="row">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><span class="oi oi-person" title="icon person" aria-hidden="true"></span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><span class="oi oi-heart" title="icon heart" aria-hidden="true"></span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><span class="oi oi-cart" title="icon cart" aria-hidden="true"></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <div class="col">Welcome, User!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="body">
+        <div class="container-fluid body-layout">
+            <div class="row">
+                <aside id="menu" class="col-2">
+                    <ul class="list-group">
+                        <li href="#" class="list-group-item list-group-item-action">Шмотки 1
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item list-group-item-action active">1</li>
+                                <li class="list-group-item list-group-item-action">2</li>
+                                <li class="list-group-item list-group-item-action">3</li>
+                            </ul>
+                        </li>
+                        <li href="#" class="list-group-item list-group-item-action">Шмотки 2</li>
+                        <li href="#" class="list-group-item list-group-item-action">Шмотки 3</li>
+                        <li href="#" class="list-group-item list-group-item-action">Шмотки 4</li>
+                        <li href="#" class="list-group-item list-group-item-action">Шмотки 5</li>
+                    </ul>
+                </aside>
+                <section id="body" class="col-8">
+                    <div>Some body text</div>
+                </section>
+                <aside id="adv" class="col-2">
+                    <div class="jumbotron">
+                        <h1 class="display-8">ADV</h1>
+                        <p class="lead">Здесь может быть Ваша реклама</p>
+                    </div>
+                    <div class="jumbotron">
+                        <h1 class="display-8">ADV</h1>
+                        <p class="lead">Здесь может быть Ваша реклама</p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+    <section id="popular-products">
+        <div class="container-fluid body-layout">
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <img class="card-img-top" src="css/icons/no-img.svg" alt="No Image Available">
+                        <div class="card-body">
+                            <h5 class="card-title">Шмотка 1</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-success">В корзину</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img class="card-img-top" src="css/icons/no-img.svg" alt="No Image Available">
+                        <div class="card-body">
+                            <h5 class="card-title">Шмотка 2</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-success">В корзину</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img class="card-img-top" src="css/icons/no-img.svg" alt="No Image Available">
+                        <div class="card-body">
+                            <h5 class="card-title">Шмотка 3</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-success">В корзину</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img class="card-img-top" src="css/icons/no-img.svg" alt="No Image Available">
+                        <div class="card-body">
+                            <h5 class="card-title">Шмотка 4</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-success">В корзину</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img class="card-img-top" src="css/icons/no-img.svg" alt="No Image Available">
+                        <div class="card-body">
+                            <h5 class="card-title">Шмотка 5</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-success">В корзину</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="new-products">
+        <div class="container-fluid body-layout">
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <img class="card-img-top" src="css/icons/no-img.svg" alt="No Image Available">
+                        <div class="card-body">
+                            <h5 class="card-title">Шмотка 1</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-success">В корзину</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img class="card-img-top" src="css/icons/no-img.svg" alt="No Image Available">
+                        <div class="card-body">
+                            <h5 class="card-title">Шмотка 2</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-success">В корзину</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img class="card-img-top" src="css/icons/no-img.svg" alt="No Image Available">
+                        <div class="card-body">
+                            <h5 class="card-title">Шмотка 3</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-success">В корзину</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img class="card-img-top" src="css/icons/no-img.svg" alt="No Image Available">
+                        <div class="card-body">
+                            <h5 class="card-title">Шмотка 4</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-success">В корзину</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img class="card-img-top" src="css/icons/no-img.svg" alt="No Image Available">
+                        <div class="card-body">
+                            <h5 class="card-title">Шмотка 5</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-success">В корзину</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="news">
+        <div class="container-fluid body-layout">
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <img class="card-img-top" src="css/icons/no-img.svg" alt="No Image Available">
+                        <div class="card-body">
+                            <h5 class="card-title">Новость 1</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="card-link">Читать...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img class="card-img-top" src="css/icons/no-img.svg" alt="No Image Available">
+                        <div class="card-body">
+                            <h5 class="card-title">Новость 2</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="card-link">Читать...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img class="card-img-top" src="css/icons/no-img.svg" alt="No Image Available">
+                        <div class="card-body">
+                            <h5 class="card-title">Новость 3</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="card-link">Читать...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img class="card-img-top" src="css/icons/no-img.svg" alt="No Image Available">
+                        <div class="card-body">
+                            <h5 class="card-title">Новость 4</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="card-link">Читать...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img class="card-img-top" src="css/icons/no-img.svg" alt="No Image Available">
+                        <div class="card-body">
+                            <h5 class="card-title">Новость 5</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="card-link">Читать...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container-fluid body-layout">
+            <div class="row">
+                <div class="col">
+                    <p class="h3">BlaBla Company</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="container-fluid body-layout">
+            <div class="row">
+                <div class="col-2">Какая-то инфа</div>
+                <div class="col-8">
+                    <nav class="nav">
+                        <a class="nav-item nav-link" href="#">Link 1</a>
+                        <a class="nav-item nav-link" href="#">Link 2</a>
+                        <a class="nav-item nav-link" href="#">Link 3</a>
+                        <a class="nav-item nav-link" href="#">Link 4</a>
+                    </nav>
+                </div>
+                <div class="col-2">Еще какая-то инфа</div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    Возможно еще какая-то хня
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,14 @@
+@import '~bootstrap/scss/bootstrap';
+@import 'color';
+
+.promo-top-banner {
+    background-color: $secondary-b-4;
+}
+
+#header {
+    background-color: $header-bg;
+    .phone {
+        color: $white;
+    }
+}
+

@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
 
@@ -18,7 +19,16 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'js/[name].js'
+        filename: 'js/[name].js',
+        sourceMapFilename: '[file].map',
+    },
+    devtool: NODE_ENV === DEVELOPMENT ? 'inline-source-map' : false,
+    devServer: {
+        publicPath: "/",
+        contentBase: path.resolve(__dirname, 'dist'),
+        historyApiFallback: true,
+        hot: true,
+        inline: true,
     },
     module: {
         rules: [
@@ -33,25 +43,76 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: extractSass.extract({
-                    use: [{
-                        loader: "css-loader"
-                    }, {
-                        loader: "sass-loader"
-                    }],
+                    use: [
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                sourceMap: true
+                            }
+                        }, {
+                            loader: 'postcss-loader',
+                            options: {
+                                sourceMap: true,
+                                plugins: function () {
+                                    return [
+                                        require('precss'),
+                                        require('autoprefixer')
+                                    ];
+                                }
+                            }
+                        },
+                        'resolve-url-loader',
+                        {
+                            loader: "sass-loader",
+                            options: {
+                                sourceMap: true
+                            }
+                        }
+                    ],
                     // use style-loader in development
                     fallback: "style-loader"
                 })
             },
             {
-                test: /\.jpg$/,
+                test: /\.(jpe?g|png|gif)$/i,
                 loader: 'file-loader',
                 options: {
                     name: 'images/[name].[ext]'
+                }
+            },
+            {
+                test: /\.svg$/i,
+                loader: 'file-loader',
+                options: {
+                    name: 'css/icons/[name].[ext]',
+                    context: path.resolve(__dirname, 'dist/css'),
+                    publicPath: '../'
+                }
+            },
+            {
+                test: /\.(otf|ttf|eot)$/i,
+                loader: 'file-loader',
+                options: {
+                    name: 'css/fonts/[name].[ext]',
+                    context: path.resolve(__dirname, 'dist/css'),
+                    publicPath: '../'
+                }
+            },
+            {
+                test: /\.woff(2)?$/,
+                loader: 'url-loader',
+                options: {
+                    limit: 10000,
+                    mimetype: 'application/font-woff',
+                    name: 'css/fonts/[name].[ext]',
+                    context: path.resolve(__dirname, 'dist/css'),
+                    publicPath: '../'
                 }
             }
         ]
     },
     plugins: NODE_ENV === DEVELOPMENT ? [
+        new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
             inject: false,
             chunks: ['index'],
@@ -64,7 +125,8 @@ module.exports = {
             filename: 'product.html',
             template: 'client/pages/product/index.html'
         }),
-        new ExtractTextPlugin('styles.css')
+        new ExtractTextPlugin('styles.css'),
+        new webpack.HotModuleReplacementPlugin()
     ] : [
         new webpack.optimize.UglifyJsPlugin({
             beautify: false,
