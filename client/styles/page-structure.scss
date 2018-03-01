@@ -7,3 +7,13 @@ section {
   margin-bottom: 20px;
   border: 1px solid #ddd;
 }
+
+.col-2-3 {
+  flex: 0 0 20.83333%;
+  max-width: 20.83333%;
+
+  & + .col-7 {
+    flex: 0 0 58.33334%;
+    max-width: 58.33334%;
+  }
+}
